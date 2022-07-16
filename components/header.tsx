@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-
+import Link from "next/link";
 import * as gtag from "../analytic/gtag";
 
 interface Props {
@@ -13,8 +13,8 @@ const Header: NextPage<Props> = (props) => {
       try {
         if (navigator.share) {
           await navigator.share({
-            title: "Share | RB Pay",
-            text: "RB Pay Shareable Secure Payment's Link for UPI :\n",
+            title: "Share | Upier",
+            text: "Upier Shareable Secure Payment's Link for UPI :\n",
             url: window.location.href,
           });
           gtag.event({
@@ -34,7 +34,18 @@ const Header: NextPage<Props> = (props) => {
 
   return (
     <header className="header">
-      <h1 className="title"><center>{props.title}</center></h1>
+      <h1 className="title">{props.title}</h1>
+      <Link href={"/"} >
+        <div className="icon">
+          <img
+            src={`/images/${props.share ? "share" : "plus"}.svg`}
+            alt="s"
+            width="0"
+            height="0"
+            onClick={share}
+          />
+        </div>
+      </Link>
     </header>
   );
 };
