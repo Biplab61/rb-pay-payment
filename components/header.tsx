@@ -1,5 +1,5 @@
 import type { NextPage } from "next";
-import Link from "next/link";
+
 import * as gtag from "../analytic/gtag";
 
 interface Props {
@@ -34,18 +34,7 @@ const Header: NextPage<Props> = (props) => {
 
   return (
     <header className="header">
-      <h1 className="title">{props.title}</h1>
-      <Link href={"/"} passHref>
-        <div className="icon">
-          <img
-            src={`/images/${props.share ? "share" : "plus"}.svg`}
-            alt="Share | Create"
-            width="30"
-            height="30"
-            onClick={share}
-          />
-        </div>
-      </Link>
+     <center> <h1 className="title">{props.title}</h1></center>
     </header>
   );
 };
