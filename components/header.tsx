@@ -13,8 +13,8 @@ const Header: NextPage<Props> = (props) => {
       try {
         if (navigator.share) {
           await navigator.share({
-            title: "Share | Upier",
-            text: "Upier Shareable Secure Payment's Link for UPI :\n",
+            title: "Share | RB Pay",
+            text: "RB Pay Shareable Secure Payment's Link for UPI :\n",
             url: window.location.href,
           });
           gtag.event({
@@ -34,7 +34,7 @@ const Header: NextPage<Props> = (props) => {
 
   return (
     <header className="header">
-     <center> <h1 className="title">{props.title}</h1></center>
+      <h1 className="title"><center>{props.title}</center></h1>
     </header>
   );
 };
