@@ -53,6 +53,17 @@ const Pay: NextPage = () => {
               P A Y
             </a>
           </div>
+                    <div className="additionaldata">
+            <p className="additionaltext">
+              Developed By{" "}
+              <Link href="https://imbiplab.in/">Biplab Pati</Link> and{" "}
+              <a href="https://imrohan.in/">
+                Rohan Thapa
+              </a>{" "}
+            </p>
+            <p className="hashtag"># Go Cashless</p>
+            <p className="india">Made in 🇮🇳 for 🇮🇳</p>
+          </div>
         </section>
         <Footer />
       </main>
